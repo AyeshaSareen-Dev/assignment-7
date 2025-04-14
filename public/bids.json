@@ -1,0 +1,66 @@
+[
+    {
+      "id": 1,
+      "title": "Vintage Leica M3 Camera",
+      "description": "A classic stainless steel Rolex Submariner in excellent condition.",
+      "currentBidPrice": 7500,
+      "timeLeft": "2h 30m",
+      "bidsCount": 12,
+      "image": "/assets/Bid1-min.png"
+    },
+    {
+      "id": 2,
+      "title": "1965 Gibson SG Standard Electric Guitar",
+      "description": "Hand-woven Persian rug from the early 20th century.",
+      "currentBidPrice": 1200,
+      "timeLeft": "5h 45m",
+      "bidsCount": 8,
+      "image": "/assets/Bid2-min.png"
+    },
+    {
+      "id": 3,
+      "title": "Original Apple Macintosh 128K (1984)",
+      "description": "Autographed jersey from a legendary NBA player.",
+      "currentBidPrice": 980,
+      "timeLeft": "1d 3h",
+      "bidsCount": 20,
+      "image": "/assets/Bid3-min.png"
+    },
+    {
+      "id": 4,
+      "title": "Rolex Submariner 16610",
+      "description": "A mint condition 1967 Ford Mustang model.",
+      "currentBidPrice": 16000,
+      "timeLeft": "3d 1h",
+      "bidsCount": 33,
+      "image": "/assets/Bid4-min.png"
+    },
+    {
+      "id": 5,
+      "title": "First Edition 'The Great Gatsby' by F. Scott Fitzgerald",
+      "description": "First edition of Amazing Fantasy #15 featuring Spider-Man.",
+      "currentBidPrice": 5000,
+      "timeLeft": "4h 15m",
+      "bidsCount": 15,
+      "image": "/assets/Bid5-min.png"
+    },
+    {
+      "id": 6,
+      "title": "Mid-Century Modern Eames Lounge Chair",
+      "description": "1950s Leica M3 35mm film camera in working condition.",
+      "currentBidPrice": 2200,
+      "timeLeft": "6h 10m",
+      "bidsCount": 11,
+      "image": "/assets/Bid6-min.png"
+    },
+    {
+        "id": 7,
+        "title": "Banksy Original Screen Print",
+        "description": "1950s Leica M3 35mm film camera in working condition.",
+        "currentBidPrice": 2200,
+        "timeLeft": "6h 10m",
+        "bidsCount": 11,
+        "image": "/assets/Bid7-min.png"
+      }
+  ]
+  
