@@ -2,6 +2,7 @@ import React from 'react';
 import BidItem from './BidItem';
 import { toast } from 'react-toastify';
 import {FaRegHeart } from 'react-icons/fa';
+import FavouriteItems from './FavouriteItems';
 const BidsItems = ({bids}) => {
     const [addedBids, setAddedBids] = React.useState([]);
     const [clickedIds, setClickedIds] = React.useState([]);
@@ -18,7 +19,7 @@ const BidsItems = ({bids}) => {
     }
 
 
-    // handleRemoveItem
+    
     return (
         <div className='px-[54px] pt-[100px] pb-[64px] bg-[#DCE5F3]'>
             <div className='space-y-2 pb-4'>
@@ -55,7 +56,45 @@ const BidsItems = ({bids}) => {
             </div>
         </div>
         <div className='flex-1/3'>
-            
+            <div className="overflow-x-auto rounded-box border border-base-content/5 bg-base-100">
+                <table className="table text-[16px] text-[#0E2954]">
+                    <thead className='text-[20px] text-black text-center'>
+                        {/* head */}
+                        <tr>
+                            <th className='flex gap-2 items-center justify-center font-semibold'>
+                                <FaRegHeart className='fill-[#0E2954]' /><span className=' text-[#0E2954]'>Favourite Items</span>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {
+                            addedBids.length === 0 ? (
+                                <tr className='border-t-2 border-gray-200'>
+                                    <td className='text-center px-4 pb-8 pt-16'>
+                                        <h1 className='text-2xl'>No Favorite Items yet</h1>
+                                        <p>Click the heart icon on any item to add it to your favorites</p>
+                                    </td>
+                                </tr>
+                            ) : (
+                                addedBids.map((bid) => {
+                                    return <FavouriteItems key={bid.id} bid={bid} />;
+                                })
+                            )
+                        }
+                        <tr className='border-t-2 border-gray-200'>
+                            <td className='text-xl flex justify-between font-semibold'>
+                                <span>Total Bids Amount: </span>
+                                {totalPrice === 0 ? (
+                                        <span>${totalPrice}</span>
+                                    ) : (
+                                        <span>${totalPrice.toLocaleString()}.00</span>
+                                    )
+                                }
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
             </div>
             
