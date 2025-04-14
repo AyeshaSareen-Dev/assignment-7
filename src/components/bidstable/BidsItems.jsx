@@ -1,5 +1,6 @@
 import React from 'react';
 import BidItem from './BidItem';
+import { toast } from 'react-toastify';
 import {FaRegHeart } from 'react-icons/fa';
 const BidsItems = ({bids}) => {
     const [addedBids, setAddedBids] = React.useState([]);
@@ -9,6 +10,7 @@ const BidsItems = ({bids}) => {
     const handleClick = ({bid}) => {
         if(!clickedIds.includes(bid.id)){
             setClickedIds([...clickedIds, bid.id]);
+            toast(`${bid.title} added to favorites!`);
             setAddedBids([...addedBids, bid]);
             setTotalPrice(totalPrice + bid.currentBidPrice);
         }
