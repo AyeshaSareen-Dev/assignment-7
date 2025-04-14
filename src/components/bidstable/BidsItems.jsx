@@ -19,7 +19,11 @@ const BidsItems = ({bids}) => {
     }
 
 
-    
+    const handleRemoveItem = (bid) => {
+        setAddedBids(addedBids.filter((item) => item.id !== bid.id));
+        setClickedIds(clickedIds.filter((item) => item !== bid.id));
+        setTotalPrice(totalPrice - bid.currentBidPrice);
+    }
     return (
         <div className='px-[54px] pt-[100px] pb-[64px] bg-[#DCE5F3]'>
             <div className='space-y-2 pb-4'>
@@ -77,7 +81,7 @@ const BidsItems = ({bids}) => {
                                 </tr>
                             ) : (
                                 addedBids.map((bid) => {
-                                    return <FavouriteItems key={bid.id} bid={bid} />;
+                                    return <FavouriteItems key={bid.id} bid={bid} handleRemoveItem={handleRemoveItem}/>;
                                 })
                             )
                         }

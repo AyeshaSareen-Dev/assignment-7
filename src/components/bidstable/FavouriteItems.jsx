@@ -1,7 +1,7 @@
 import React from 'react';
 import { RxCross2 } from 'react-icons/rx';
 
-const FavouriteItems = ({bid}) => {
+const FavouriteItems = ({bid, handleRemoveItem}) => {
     return (
         
             <tr className='border-t-2 border-gray-200'>
@@ -14,7 +14,7 @@ const FavouriteItems = ({bid}) => {
                             <p>Bids:{bid.bidsCount}</p>
                         </div>
                     </div>
-                    <span><RxCross2 /></span>
+                    <span><RxCross2 onClick={() => handleRemoveItem(bid)} /></span>
             </td>
         </tr>
         
